@@ -6,15 +6,16 @@
   
 }
 .moviePoster{
-  width: 350px;
-  height: 500px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 2px;
 }
 .movieContainer{
-  width: 350px;
-  background-color: orange;
-  padding: 20px;
+  width: 250px;
+  height: max-content;
+  background-color: rgb(194, 194, 194);
+  padding: 5px;
   border-radius: 5px;
 }
 .name-rating{
@@ -35,7 +36,7 @@
 }
 .movieList{
   display: flex;
-  gap:10px;
+  gap:5px;
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -51,15 +52,41 @@
 }
 .ColorBar{
   margin-top: 10px;
+  border-radius: 5px;
 }
 .addMovie{
-display: flex;
-flex-direction: column;
-gap:10px;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  margin: 50px;
 
 }
 .colorContainer{
   display: flex;
   justify-content: space-around;
 
+}
+.home{
+  display: flex;
+  justify-content: center;
+}
+.colorBox{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+}
+.ColorBarOuter{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.err{
+  display: flex;
+  justify-content: center
+}
+.trailerSummary{
+  max-width: 800px;
+  padding: 24px;
 }
