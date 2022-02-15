@@ -6,17 +6,27 @@
   
 }
 .moviePoster{
-  width: 250px;
+  width: 240px;
   height: 250px;
   object-fit: cover;
   border-radius: 2px;
+  
 }
 .movieContainer{
   width: 250px;
-  height: max-content;
-  background-color: rgb(194, 194, 194);
+  height: min-content;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
   padding: 5px;
   border-radius: 5px;
+  transition: transform .1s;
+  margin: 5px auto;
+
+}
+.movieContainer:hover{
+  
+  height: min-content ;
+  transform:scale(102%);
+  
 }
 .name-rating{
   display: flex;
@@ -42,6 +52,9 @@
 }
 .counterContainer{
   display: flex;
+  justify-content: center;
+  padding: 10px;
+
   gap: 10px;
 }
 .likeDislike{
@@ -90,3 +103,26 @@
   max-width: 800px;
   padding: 24px;
 }
+.router{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px;
+  gap:10px;
+  flex-wrap: nowrap;
+  
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: #e3ffe7;
+  
+
+}
+body{
+  background: #44A08D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  
+  
+}
+

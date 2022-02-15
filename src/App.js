@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link ,useHistory} from "react-router-dom";
 import { MovieList } from "./MovieList";
 import { ColorBox } from "./ColorBox";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
@@ -43,30 +43,30 @@ export default function App() {
   }
 ]
   let[movielist,setmovielist] = useState(arr)
-  let[moviename, setmoviename] = useState('')
-  let[poster,setposter] = useState('')
-  let[rating,setrating] = useState('')
-  let[summary,setsummary] = useState('')
+  
   return (
     
     <div className="App">
         
-         <ul>
-           <li>
-             <Link to='/'>Home</Link>
-           </li>
-           <li>
-             <Link to='/movie'>Movie</Link>
-           </li>
-           <li>
-             <Link to='/game'>Game</Link>
-           </li>
+         <div className="router">
            
-         </ul>
+             <Link to='/'>Home</Link>
+           
+           
+             <Link to='/movie' >Movie</Link>
+           
+          
+             <Link to='/game'>Game</Link>
+           
+           
+             <Link to ='/addmovie'>Add Movie</Link>
+           
+           
+           </div>
        <switch>
          <Route exact path="/">
            <div className="home">
-           <h1>Home</h1>
+           <h1 className="w3-container w3-center w3-animate-left">Home</h1>
            </div>
          </Route>
          <Route path='/movies/:id'>
@@ -74,30 +74,20 @@ export default function App() {
          </Route>
          <Route path="/movie">
          <div>
+          
          <MovieList movielist={movielist} setmovielist = {setmovielist}/>
          
-        <div className="addMovie">
-    
-          <h2>Add Movie</h2>
-          <input placeholder="Enter Movie name here" onChange={(event)=>setmoviename(event.target.value)}/>
-          <input placeholder="Enter Poster link here" onChange={(event)=>setposter(event.target.value)}/>
-          <input placeholder="Enter Movie Rating here" onChange={(event)=>setrating(event.target.value)}/>
-          <input placeholder="Enter Movie Summary here" onChange={(event)=>setsummary(event.target.value)}/>
-          <button onClick={()=>{
-            let movieObj = {
-              name:moviename,
-              img_link: poster,
-              rating:rating,
-              summary:summary
-            }
-            console.log(movieObj)
-            setmovielist([...arr,movieObj])
-          }
-          }>ADD MOVIE</button>
-          </div>
-        </div>
         
-         </Route>
+        </div>
+        </Route>
+
+        <Route path='/addmovie'>
+          <div>
+          
+        <AddMovie movielist={movielist} setmovielist = {setmovielist}/>
+        </div>
+        </Route>
+        
          <Route path="/game">
            <ColorBox/>
          </Route>
@@ -109,6 +99,33 @@ export default function App() {
      </div>
     
   );
+}
+function AddMovie({movielist,setmovielist}){
+  let[moviename, setmoviename] = useState('')
+  let[poster,setposter] = useState('')
+  let[rating,setrating] = useState('')
+  let[summary,setsummary] = useState('')
+  let history = useHistory();
+   return <div className="addMovie w3-container w3-center w3-animate-bottom">
+    
+   <h2>Add Movie</h2>
+   <input placeholder="Enter Movie name here" onChange={(event)=>setmoviename(event.target.value)}/>
+   <input placeholder="Enter Poster link here" onChange={(event)=>setposter(event.target.value)}/>
+   <input placeholder="Enter Movie Rating here" onChange={(event)=>setrating(event.target.value)}/>
+   <input placeholder="Enter Movie Summary here" onChange={(event)=>setsummary(event.target.value)}/>
+   <button onClick={()=>{
+     let movieObj = {
+       name:moviename,
+       img_link: poster,
+       rating:rating,
+       summary:summary
+     }
+     console.log(movieObj)
+     setmovielist([...movielist,movieObj])
+     history.push('/movie')
+   }
+   }>ADD MOVIE</button>
+   </div>
 }
 
 function MovieDetails({movielist}){

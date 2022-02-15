@@ -9,7 +9,7 @@ export function ColorBox() {
     background: color
   };
   return (
-    <div className="colorBox">
+    <div className="colorBox w3-center w3-animate-top">
       <input value={color} style={styles1} onChange={(event) => setColor(event.target.value)} /><br />
 
       <button onClick={() => setcolorlist([...colorlist, color])}>Click Me</button>

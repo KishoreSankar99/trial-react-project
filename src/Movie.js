@@ -12,7 +12,7 @@ export function Movie({ name, img_link, rating, summary ,deleteButton,id}) {
   let btnstyle = {
     display: btn ? 'block' : 'none'
   };
-  return <div className="movieContainer">
+  return <div className="movieContainer w3-container w3-center w3-animate-right">
     <img src={img_link} alt='' className="moviePoster"></img>
     <div className="name-rating">
       <h2 className="movieName">{name}</h2>
