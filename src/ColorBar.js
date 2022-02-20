@@ -1,13 +1,20 @@
-export function ColorBar({ color, name, index }) {
+export function ColorBar({ color, key,cdeletebtn }) {
+  console.log(color)
   let style = {
     background: color,
     height: '25px',
     width: '175px'
   };
-  console.log(color, index);
+  let btnStyle = {
+    height:'20px'
+  }
+  
   return (
     <div className="ColorBarOuter">
-      <div key={index} className="ColorBar" style={style}>
+      <div key={key} className="ColorBar" style={style}>
+        <p>{color}</p>
+        {cdeletebtn}
+        
       </div>
     </div>
   );

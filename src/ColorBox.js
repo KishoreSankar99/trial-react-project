@@ -13,7 +13,18 @@ export function ColorBox() {
       <input value={color} style={styles1} onChange={(event) => setColor(event.target.value)} /><br />
 
       <button onClick={() => setcolorlist([...colorlist, color])}>Click Me</button>
-      {colorlist.map((item, index) => <ColorBar key={index} color={item} name={item} />)}
+      {colorlist.map((item, index) =>{ 
+      console.log(index)
+      return <ColorBar key={index}
+       color={item} 
+       colorlist={colorlist} 
+       setcolorlist={setcolorlist}
+       cdeletebtn = {<button onClick={()=>{
+         let copy = [...colorlist]
+         copy.splice(index,1)
+         setcolorlist(copy)
+       }}>Delete</button>}
+       />})}
     </div>
   );
 }

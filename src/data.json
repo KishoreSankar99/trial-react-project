@@ -1,0 +1,42 @@
+[
+  {
+    "id": "100",
+    "name": "RRR",
+    "img_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG6L2WmlrU5r2HzTKoXTJC5DFyU9vMbUJ79Cp5P7RB5QEEnXkH",
+    "rating": 8.5,
+    "src": "https://www.youtube.com/embed/eOrNdBpGMv8",
+    "summary": "A tale of two legendary revolutionaries and their journey far away from home. After their journey they return home to start fighting back against British colonialists in the 1920s."
+  },
+  {
+    "id": "101",
+    "name": "The Avengers",
+    "img_link": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersendgame_lob_crd_05.jpg",
+    "src": "https://www.youtube.com/embed/eOrNdBpGMv8",
+    "rating": 9.2,
+    "summary": "After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance."
+  },
+  {
+    "id": "102",
+    "name": "Mayakkam Enna",
+    "img_link": "https://i.pinimg.com/originals/82/6c/5e/826c5e368936d8a2ac4894d60d63e56d.jpg",
+    "src": "https://www.youtube.com/embed/eOrNdBpGMv8",
+    "rating": 7.1,
+    "summary": "Karthik is a wildlife photographer, who meets Yamini, his friends girlfriend, and gets married to her by a twist of fate. Their married life turns sour when Yamini has a miscarriage."
+  },
+  {
+    "id": "103",
+    "name": "Titanic",
+    "img_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-oUFRn_Err2mBTIRXR0FEuTbjJXS687eoCXHBAVBZ-v8xyeJw",
+    "rating": 9.5,
+    "src": "https://www.youtube.com/embed/eOrNdBpGMv8",
+    "summary": "Seventeen-year-old Rose hails from an aristocratic family and is set to be married. When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him."
+  },
+  {
+    "id": "104",
+    "name": "3",
+    "src": "https://www.youtube.com/embed/eOrNdBpGMv8",
+    "img_link": "https://upload.wikimedia.org/wikipedia/en/d/d6/3_%282012_Tamil_film_soundtrack%29.jpg",
+    "rating": 7.9,
+    "summary": "Ram and Janani are high school sweethearts who eventually get married. However, Janani is mystified when Ram commits suicide all of a sudden and she tries to find out the truth behind his death."
+  }
+]
